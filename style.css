@@ -247,11 +247,12 @@ input {
     -webkit-outline: none;
     border-radius: 5px;
     color: rgba(51, 51, 51, 0.6);
+    border-style: unset;
 }
 
 input:focus {
-    box-shadow: none;
-    -webkit-box-shadow: none;
+    outline: none;
+    -webkit-outline: none;
 }
 
 .payment input:nth-child(1) {
