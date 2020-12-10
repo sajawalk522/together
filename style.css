@@ -251,6 +251,7 @@ input {
 
 input:focus {
     box-shadow: none;
+    -webkit-box-shadow: none;
 }
 
 .payment input:nth-child(1) {
