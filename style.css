@@ -425,10 +425,16 @@ input:focus {
         -webkit-width: 100%!important;
         -moz-width: 100%!important;
     }
+    .payment {
+        box-shadow: unset;
+    }
     .payment input {
         width: 100%!important;
         -webkit-width: 100%!important;
         -moz-width: 100%!important;
+    }
+    .card-box>div form input {
+        box-shadow: unset;
     }
     .content-container .content-inner .left-container {
         width: 100%;
