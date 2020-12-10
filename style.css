@@ -6,26 +6,23 @@ body{
 }
 .main-container{
   width: 100%;
-  padding-top: 5px;
 }
 .main-container .heading {
-    font-size: 24px;
-    font-weight: 600;
-    text-align: center;
     background: #FFFFFF;
     box-shadow: 0px 2px 8px rgba(51, 51, 51, 0.1);
-    padding: 5px;
-}
-.main-container .heading h2{
-    margin: 0;
-    background: #FFFFFF;
-    box-shadow: 0px 2px 8px rgba(51, 51, 51, 0.1);
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
 .container{
     display: flex;
+    margin-top: 10px;
+    justify-content: space-between;
 }
 .content-container{
-  background: #DBDADA;
+  background: #f7f7f7;
   display: flex;
   justify-content: center;
   padding: 50px 0px;
@@ -34,31 +31,43 @@ body{
    width: 848px;
 }
 .content-container .content-inner .left-container{
-  width: 63%;
+  width: 59%;
 }
 .content-container .content-inner .right-container{
-  width: 40%;
+  width: 34%;
 }
-.content-container .content-inner .content-heading{
-    height: 50px; 
+.content-container .content-inner .content-heading{ 
     background: #FFF388;
     border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+.content-container .content-inner .content-heading h3{
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 150%;
+    color: #404950;
+    letter-spacing: 0.005em;
+}
 .check-container {
     display: block;
     position: relative;
-    padding: 10px 10px 10px 55px;
-    /* margin-bottom: 12px; */
-    cursor: pointer;
+    padding: 6px 10px 6px 60px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
     font-size: 16px;
-    user-select: none;
+    line-height: 150%;
+    color: #404950;
+    letter-spacing: 0.005em;
   }
   .check-container:hover{
       background-color: #fff388;
   }
+  .check-container.active{
+    background-color: #fff388;
+}
   .check-container input {
     position: absolute;
     opacity: 0;
@@ -68,19 +77,19 @@ body{
   }
   .checkmark {
     position: absolute;
-    top: 9px;
-    left: 9px;
-    height: 20px;
-    width: 25px;
-    border-radius: 4px;
-    background-color: #eee;
+    top: 8px;
+    left: 22px;
+    height: 16px;
+    width: 16px;
+    background-color: #fff;
+    border: 1px solid #000;
   }
   /* .check-container:hover input ~ .checkmark {
     background-color: #ccc;
   } */
-  /* .check-container input:checked ~ .checkmark {
-    background-color: #2196F3;
-  } */
+  .check-container input:checked ~ .checkmark {
+    background-color: #000;
+  }
   
   .checkmark:after {
     content: "";
@@ -93,54 +102,70 @@ body{
   }
   
   .check-container .checkmark:after {
-    left: 9px;
+    left: 5px;
     top: 1px;
-    width: 5px;
+    width: 4px;
     height: 10px;
-    border: solid #000;
+    border: solid #fff;
     border-width: 0 2px 2px 0;
     transform: rotate(45deg);
   }
+  
     .card-box{
      background-color: #fff;
-     width: 420px;
-     padding: 30px;
-     margin-top: 20px;
+     margin: 30px 0px;
      border-radius: 10px;
+     padding: 22px 0px;
+     box-shadow: 0px 2px 8px rgba(51, 51, 51, 0.1);
+    }
+    .box{
+        padding: 22px;
+    }
+    .box>div h3{
+      padding-left: 12px!important;
     }
     .card-box>div h3{
     margin: 0;
-    font-size: 18px;
-    padding-bottom: 10px;
+    font-weight: bold;
+    font-size: 19px;
+    line-height: 150%;
+    color: #404950;
+    letter-spacing: 0.005em;
+    padding-left: 30px;
+    margin-bottom: 10px;
     }
     .card-box>div form{
         display: flex;
         flex-direction: column;
     }
     .card-box>div form input{
-       margin-bottom: 6px;
-       padding: 8px;
+       margin-bottom: 15px;
+       background: #F7F7F7;
+       border: 1px solid rgba(51, 51, 51, 0.1);
+       box-shadow: 0px 2px 5px rgba(51, 51, 51, 0.15);
+       padding: 13px 16px;
+      
     }
     .card-box>div form label{
         display: flex;
         justify-content: space-between;
+        margin-bottom: 5px;
     }
     .card-box>div form label input{
-        width: 115px;
+        width: 100px;
     }
     .payment{
     border: 1px solid rgba(51, 51, 51, 0.1);
-     padding: 8px;
-     display: flex;
-     justify-content: space-between;
-     background-color: #f7f7f7;
+    box-shadow: 0px 2px 5px rgba(51, 51, 51, 0.15);
+    padding: 13px 16px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #f7f7f7;
     }
     input{
+        background: #F7F7F7;
         outline: none;
-        background-color: #f7f7f7;
-        box-shadow: none;
-        border-style: none;
-        border: 1px solid rgba(51, 51, 51, 0.1)
+        border-radius: 5px;
     }
     input:focus{
         box-shadow: none;
@@ -161,11 +186,12 @@ body{
     .finish{
         background: #28C700;
         border-radius: 5px;
-        margin-top: 20px;
+        margin-top: 35px;
         padding: 10px;
         display: flex;
         justify-content: center;
         align-items: center;
+        cursor: pointer;
     }
     .finish a{
         font-family: Roboto;
@@ -179,15 +205,15 @@ body{
         text-decoration: none;
         text-align: center;
     }
+    .finish a img{
+        margin-right: 12px;
+        margin-top: -4px;
+    }
     .icon-container{
         display: flex;
         justify-content: center;
         align-items: center;
         padding: 20px;
-    }
-    .icon-container i{
-        margin-right: 20px;
-        font-size: 24px;
     }
     .paypal-btn{
        background: #FFC43A;
@@ -206,31 +232,28 @@ body{
         /* height: 28px; */
     }
     .image-box{
-        width: 300px;
         background: #FFFFFF;
         box-shadow: 0px 2px 8px rgba(51, 51, 51, 0.1);
         border-radius: 10px;
         padding: 15px;
-        margin-top: 20px;
+        margin: 30px 0px;
         }
         .image-box>div h3{
             margin: 0px;
-            padding-bottom: 10px;
-            font-family: Roboto;
-            font-style: normal;
+            padding-bottom: 12px;
+            padding-left: 5px;
             font-weight: bold;
             font-size: 19px;
             line-height: 150%;
-        }
-        .image-box>div .img-container{
-            width: 300px;
+            color: #404950;
+            letter-spacing: 0.005em;
         }
         .image-box>div .img-container img{
             width: 100%;
             border-radius: 5px;
         }
         .image-box .order-container{
-          padding: 15px;
+          padding: 6px;
         }
         .image-box>div .order-list p{
             display: flex;
@@ -270,9 +293,16 @@ body{
             .container{
                 display: flex;
                 flex-wrap: wrap;
+                flex-direction: column-reverse;
             }
             .card-box{
-                width: 80%;
+                width: 100%;
+            }
+            .box{
+                padding: 0px;
+            }
+            .box>div{
+                padding: 15px;
             }
             .check-container{
                 font-size: 14px;
