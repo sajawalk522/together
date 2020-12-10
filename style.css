@@ -248,6 +248,7 @@ input {
     border-radius: 5px;
     color: rgba(51, 51, 51, 0.6);
     border-style: unset;
+    -webkit-border-style: unset;
 }
 
 input:focus {
