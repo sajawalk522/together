@@ -1,8 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    width: 100%;
-    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
 }
 
 .main-container {
@@ -172,7 +171,6 @@ body {
     -webkit-border: 1px solid rgba(51, 51, 51, 0.1);
     -webkit-box-shadow: 0px 2px 5px rgba(51, 51, 51, 0.15);
     padding: 13px 16px;
-    box-sizing: border-box;
 }
 
 .card-box>div form select {
@@ -351,9 +349,6 @@ input:focus {
 }
 
 .image-box>div .order-list p span {
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
     font-size: 15px;
     line-height: 150%;
     letter-spacing: 0.005em;
@@ -382,6 +377,8 @@ input:focus {
 
 @media (max-width: 479px) and (min-width: 320px) {
     .content-container .content-inner {
+        -webkit-width: 100%;
+        -webkit-padding: 5px;
         width: 100%;
         padding: 5px;
     }
@@ -389,12 +386,17 @@ input:focus {
         display: flex;
         flex-wrap: wrap;
         flex-direction: column-reverse;
+        -webkit-display: flex;
+        -webkit-flex-wrap: wrap;
+        -webkit-flex-direction: column-reverse;
     }
     .card-box {
         width: 100%;
+        -webkit-width: 100%;
     }
     .box {
         padding: 0px;
+        -webkit-padding: 0px;
     }
     .box>div {
         padding: 15px;
@@ -410,9 +412,13 @@ input:focus {
     }
     .card-box>div form label input {
         width: 100%!important;
+        -webkit-width: 100%!important;
+        -moz-width: 100%!important;
     }
     .payment input {
         width: 100%!important;
+        -webkit-width: 100%!important;
+        -moz-width: 100%!important;
     }
     .content-container .content-inner .left-container {
         width: 100%;
