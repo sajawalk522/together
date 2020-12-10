@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100&display=swap" rel="stylesheet">
     <title>Together</title>
 </head>
@@ -27,16 +28,16 @@
                             <div class="card-box">
                                 <div>
                                     <h3>1. Select Quantity</h3>
-                                    <label class="check-container">1 FREE KN95: Max-Sport
-                                <input type="checkbox" >
+                                    <label class="check-container" id="checked">1 FREE KN95: Max-Sport
+                                <input type="checkbox" name="check[1][]" class="btn">
                                 <span class="checkmark"></span>
                               </label>
                                     <label class="check-container">10 KN95: Max-Sport ($3.99/ea)
-                                <input type="checkbox">
+                                <input type="checkbox" name="check[1][]"  class="btn">
                                 <span class="checkmark"></span>
                               </label>
                                     <label class="check-container active">30 KN95: Max-Sport ($3.99/ea)
-                                <input type="checkbox" checked="checked">
+                                <input type="checkbox" checked="checked" name="check[1][]"  class="btn">
                                 <span class="checkmark"></span>
                               </label>
 
@@ -57,11 +58,7 @@
                                         <option value="State">State</option>
                                         <option value="State">State</option>
                                       </select>
-                                      <select name="zip">
-                                        <option value="Zip">ZIP</option>
-                                        <option value="Zip">ZIP</option>
-                                        <option value="Zip">ZIP</option>
-                                      </select>
+                                      <input type="number" name="zip" placeholder="ZIP">
                                     </label>
                                         <label class="check-container">Billing address is same as shipping
                                         <input type="checkbox" checked="checked">
@@ -128,3 +125,24 @@
 </body>
 
 </html>
+<script>
+    $("input:checkbox").on('click', function() {
+        var $box = $(this);
+        if ($box.is(":checked")) {
+            var group = "input:checkbox[name='" + $box.attr("name") + "']";
+            $(group).prop("checked", false);
+            $box.prop("checked", true);
+        } else {
+            $box.prop("checked", false);
+        }
+    });
+    var header = document.getElementById("checked");
+    var btns = header.getElementsByClassName("btn");
+    for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function() {
+            var current = document.getElementsByClassName("active");
+            current[0].className = current[0].className.replace("active", "");
+            this.className += "active";
+        });
+    }
+</script>

@@ -3,6 +3,11 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    font-family: 'Roboto', sans-serif;
+}
+
+.main-container {
+    width: 100%;
 }
 
 .main-container .heading {
@@ -73,7 +78,11 @@ body {
     background-color: #fff388;
 }
 
-.check-container.active {
+.check-container:focus-within {
+    background-color: #fff388;
+}
+
+.active {
     background-color: #fff388;
 }
 
@@ -168,6 +177,7 @@ body {
     -webkit-border: 1px solid rgba(51, 51, 51, 0.1);
     -webkit-box-shadow: 0px 2px 5px rgba(51, 51, 51, 0.15);
     padding: 13px 16px;
+    box-sizing: border-box;
 }
 
 .card-box>div form select {
@@ -186,6 +196,7 @@ body {
     padding: 12px;
     color: rgba(51, 51, 51, 0.6);
     outline: none;
+    -webkit-outline: none;
     cursor: pointer;
     border-radius: 5px;
     -webkit-appearance: none;
@@ -233,6 +244,7 @@ select::-ms-expand {
 input {
     background: #F7F7F7;
     outline: none;
+    -webkit-outline: none;
     border-radius: 5px;
     color: rgba(51, 51, 51, 0.6);
 }
