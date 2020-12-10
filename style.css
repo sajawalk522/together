@@ -247,8 +247,8 @@ input {
     -webkit-outline: none;
     border-radius: 5px;
     color: rgba(51, 51, 51, 0.6);
-    border-style: unset;
-    -webkit-border-style: unset;
+    border-style: unset!important;
+    -webkit-border-style: unset!important;
 }
 
 input:focus {
