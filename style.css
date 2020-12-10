@@ -239,6 +239,8 @@ select::-ms-expand {
     display: flex;
     justify-content: space-between;
     background-color: #f7f7f7;
+    border-style: unset;
+    -webkit-border-style: unset;
 }
 
 input {
@@ -247,8 +249,8 @@ input {
     -webkit-outline: none;
     border-radius: 5px;
     color: rgba(51, 51, 51, 0.6);
-    border-style: unset!important;
-    -webkit-border-style: unset!important;
+    border-style: unset;
+    -webkit-border-style: unset;
 }
 
 input:focus {
