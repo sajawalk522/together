@@ -451,11 +451,11 @@ input:focus {
         background: #F7F7F7;
         border: 1px solid #ececec;
         box-sizing: border-box;
-        box-shadow: unset!important;
         border-radius: 5px;
         font-size: 10px;
         outline-style: none;
         outline: none;
+        border-top: none;
     }
     .card-box>div form input:focus {
         outline-style: none;
