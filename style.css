@@ -222,7 +222,7 @@ select::-ms-expand {
 }
 
 .card-box>div form label input {
-    width: 100px;
+    width: 30%;
 }
 
 .payment {
@@ -239,8 +239,6 @@ select::-ms-expand {
     display: flex;
     justify-content: space-between;
     background-color: #f7f7f7;
-    border-style: unset;
-    -webkit-border-style: unset;
 }
 
 input {
@@ -259,17 +257,17 @@ input:focus {
 }
 
 .payment input:nth-child(1) {
-    width: 350px;
+    width: 70%!important;
     border: none;
 }
 
 .payment input:nth-child(2) {
-    width: 80px;
+    width: 20%!important;
     border: none;
 }
 
 .payment input:nth-child(3) {
-    width: 50px;
+    width: 10%!important;
     border: none;
 }
 
@@ -429,12 +427,6 @@ input:focus {
         -webkit-width: 100%!important;
         -moz-width: 100%!important;
     }
-    .card-box>div form input {
-        border: unset;
-    }
-    .card-box>div form select {
-        border: unset;
-    }
     .payment input {
         width: 100%!important;
         -webkit-width: 100%!important;
@@ -454,5 +446,19 @@ input:focus {
     }
     .desktop-box {
         display: none;
+    }
+    .card-box>div form input {
+        background: #F7F7F7;
+        border: 1px solid rgba(51, 51, 51, 0.1);
+        box-sizing: border-box;
+        box-shadow: 0px 2px 5px rgba(51, 51, 51, 0.15);
+        border-radius: 5px;
+        font-size: 10px;
+    }
+    .card-box>div form select {
+        width: 45%;
+    }
+    .card-box>div form .zip {
+        width: 45%!important;
     }
 }
